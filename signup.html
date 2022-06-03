@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Lucida Handwriting;
+            background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+            background-attachment: fixed;
+        }
+        
+        input[type="text"] {
+            width: 250px;
+        }
+        
+        form {
+            text-align: center;
+            font-family: Calibri;
+            font-size: 20px;
+            border: 3px solid black;
+            width: 650px;
+            height: 100%;
+            margin: 20px auto;
+        }
+        
+        td {
+            padding: 50sspx;
+        }
+        
+        td:first-child {
+            text-align: right;
+            font-weight: bold;
+        }
+        
+        td:last-child {
+            text-align: left;
+        }
+        
+        table {
+            text-align: left;
+            align-self: center
+        }
+    </style>
+    <script>
+        function validateform() {
+            var fname = document.getElementById("first").value;
+            var gender = document.getElementById("gender").value;
+            var email = document.getElementById("mail").value;
+            var mobile = document.getElementById("mobile").value;
+            var age = document.getElementById("age").value;
+            var pass = document.getElementById("password").value;
+            var conf = document.getElementById("confirm").value;
+            if (fname.length == 0) {
+                alert("Name is required");
+                fname.focus();
+                return false;
+            }
+            if (gender == "on") {
+                alert("Gender is required");
+                gender.focus();
+                return false;
+            }
+            if (email.length == 0) {
+                alert("Email Id is required");
+                email.focus();
+                return false;
+            }
+            if (mobile.length == 10) {
+                alert("Enter valid mobile number");
+                mobile.focus();
+                return false;
+            }
+            if (age < 0) {
+                alert("Enter valid age");
+                age.focus();
+                return false;
+            }
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1 align="center">Welcome!</h1>
+    <br>
+    <form>
+        <p><a href="signup.html">Signup</a>/
+            <a href="login.html">Login</a></p>
+        <h2 align="center">Sign Up</h2>
+        <table align="center">
+            <tr>
+                <th>
+                    <label>Your Name:</label>
+                </th>
+                <th>
+                    <input type="text" id="first" placeholder="First name" />
+                </th>
+            </tr>
+            <tr>
+                <th><label>Gender: </label></th>
+                <th>
+                    <input type="radio" name="gender" value="male" id="gender">Male
+                    <input type="radio" name="gender" value="femele" id="gender">Female
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <label>Enter your E-mail Id:</label>
+                </th>
+                <th>
+                    <input type="email" id="mail" placeholder="Email Id" />
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <label>Enter your Mobile Number:</label>
+                </th>
+                <th>
+                    <input type="text" id="mobile" placeholder="Mobile Number" />
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <label>Enter your Age:</label>
+                </th>
+                <th>
+                    <input type="text" id="age" placeholder="Age" />
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <label>Enter Password:</label>
+                </th>
+                <th>
+                    <input type="password" id="password" placeholder="Password" />
+                </th>
+
+            </tr>
+
+            <tr>
+                <th>
+                    <label>Enter Confirm Password:</label>
+                </th>
+                <th>
+                    <input type="password" id="confirm" placeholder="Confirm Password" />
+                </th>
+
+            </tr>
+
+        </table>
+        <br>
+        <button type="button" id="submit" onclick="validateform();">Register</button>
+        </button>
+        <br><br>
+    </form>
+
+</body>
+
+</html>

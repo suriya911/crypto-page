@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .column {
+            float: left;
+            width: 50%;
+            padding: 2px;
+        }
+        /* Clearfix (clear floats) */
+        
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+        
+        th,
+        td {
+            text-align: left;
+            padding: 10px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="column">
+            <table>
+                <tr>
+                    <th>
+                        <p>crypto coins</p>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <a href="bitcoin.html">bitcoin</a></th>
+                </tr>
+                <tr>
+                    <th>
+                        <a href="ethirium.html">Ethereum</a></th>
+                </tr>
+                <tr>
+                    <th>
+                        <a href="tether.html">Tether</a></th>
+                </tr>
+                <tr>
+                    <th>
+                        <a href="usdcoin.html">USD Coin</a></th>
+                </tr>
+                <tr>
+                    <th>
+                        <a href="bnb.html">bnb</a></th>
+                </tr>
+                <tr>
+                    <th>
+                        <a href="binance.html">binance</a></th>
+                </tr>
+                <tr>
+                    <th>
+                        <a href="dogecoin.html">dogecoin</a></th>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
